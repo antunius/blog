@@ -1,17 +1,17 @@
 table! {
     article (id) {
-        id -> Bigint,
+        id -> Nullable<Integer>,
         title -> Varchar,
         body -> Text,
-        author -> Bigint,
-        create_at -> Nullable<Timestamp>,
-        update_at -> Nullable<Timestamp>,
+        author -> Integer,
+        create_at -> Timestamp,
+        update_at -> Timestamp,
     }
 }
 
 table! {
     author (id) {
-        id -> Bigint,
+        id -> Nullable<Integer>,
         name -> Varchar,
         username -> Varchar,
         resume -> Text,
